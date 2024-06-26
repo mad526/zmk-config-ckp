@@ -7,6 +7,15 @@
 &gresc { keep-mods = <(MOD_LSFT|MOD_RSFT)>; };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_tog_2 {
+            bindings = <&tog 2>;
+            key-positions = <61 57>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -48,7 +57,7 @@
 &trans     &trans  &trans  &trans  &trans  &trans  &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS  &trans   &trans
 &kp CAPS   &trans  &trans  &trans  &trans  &trans  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &trans   &trans   &trans
 &trans     &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans    &trans     &trans   &trans   &trans
-           &trans  &trans  &trans  &trans  &trans  &trans     &trans    &tog 2
+           &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
